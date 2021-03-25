@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.world {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    perspective: 500px;
+}
+@keyframes poster-ani {
+    0% {
+        transform: rotateY(-20deg);
+    }
+    100% {
+        transform: rotateY(20deg);
+    }
+}
+.poster {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: pink;
+    animation: poster-ani 1.6s infinite linear alternate;
+    transform-style: preserve-3d;
+}
+.poster-title {
+    padding: 0.5em 0;
+    font-size: 2rem;
+    text-align: center;
+    transform: translateZ(30px);
+}
+.rabbit {
+    position: absolute;
+}
+.rabbit:nth-of-type(1) {
+    width: 25%;
+    left: 20%;
+    bottom: 40%;
+    transform: translateZ(100px);
+}
+.rabbit:nth-of-type(2) {
+    width: 40%;
+    right: 10%;
+    bottom: 10%;
+    transform: translateZ(40px);
+}
+.rabbit:nth-of-type(3) {
+    width: 35%;
+    left: 10%;
+    bottom: 5%;
+    transform: translateZ(70px);
+}
